@@ -4,7 +4,7 @@
 environment:
   matrix:
     # node.js
-    - nodejs_version: "6"
+    - nodejs_version: "8"
 
 install:
   - ps: Install-Product node $env:nodejs_version
