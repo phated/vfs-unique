@@ -6,7 +6,7 @@ var through = require('through2');
 function unique() {
   return gulp.src(['./src/./file.js', './src/./**/*.js'])
     .pipe(through.obj(function(file, _, cb) {
-      console.log(file);
+      console.log(file.path);
       cb(null, file);
     }))
     .pipe(gulp.dest('./dist'))
